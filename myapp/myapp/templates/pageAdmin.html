@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Zone</tittle>
+</head>
+<body>
+    
+
+    {% extends 'padre.html' %}
+    {% load static %}
+    {% block contenidoQueCambia %}
+    <table style="border: 1px dashed black;">
+        <tr>
+            <td style="border: 1px dashed black;"><h1>Pacientes</h1></td>
+        </tr>
+        <tr>
+            <td style="border: 1px dashed black;"><a href="crudPacAdm"><img src="{% static 'myapp/image/pacadm.png' %}" title="Zona de Medicos" height="300" width="300"></td></a>
+            <td style="border: 1px dashed black;"><br><a href="crudPacAdm">Leer/borrar/modificar Pacientes</td></a>
+        </tr>
+        <tr>
+            <td style="border: 1px dashed black;"><h1>Turnos</h1></td>
+        </tr>
+        <tr>
+            <td style="border: 1px dashed black;"><a href="crudTurAdm"><img src="{% static 'myapp/image/turadm.jpg' %}" title="Zona de Turnos" height="300" width="300"></td></a>
+            <td style="border: 1px dashed black;"><br><a href="crudTurAdm">Ver/Modificar/Borrar Turnos</a> </td>
+        </tr>
+        <tr>
+            <td style="border: 1px dashed black;"><h1>Medicos</h1></td>
+        </tr>
+        <tr>
+            <td style="border: 1px dashed black;"><a href="crudDocAdm"><img src="{% static 'myapp/image/docadm.jpg' %}" title="Zona de pacientes" height="300" width="300"></a></td>
+            <td style="border: 1px dashed black;"><br><a href="crudDocAdm">Ver/Modificar/Borrar Medicos</a> </td>
+        </tr>
+    </table>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado Busqueda</title>
+</head>
+<body>
+{% extends 'padre.html' %}
+{% load static %}
+{% block contenidoQueCambia %}
+<table><caption></caption><h2>Resultados de búsqueda:</h2></caption>
+    <tr>
+        <td></td>
+        <th style="border: 1px dashed black;">Usuario&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </th>
+        <th style="border: 1px dashed black;">Nombre  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </th>
+        <th style="border: 1px dashed black;">Fecha  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th style="border: 1px dashed black;">Especialidad  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      </tr>
+      {% for p in celda %}
+    <tr>
+        <td ></td>
+            <th style="border: 1px dashed black;" text-align: center>{{ p.usuario}}</th>
+            <th style="border: 1px dashed black;" text-align: center>{{ p.paciente }}</th>
+            <th style="border: 1px dashed black;" text-align: center>{{ p.fecha }}</th>
+            <th style="border: 1px dashed black;" text-align: center>{{ p.especial }}</th>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+</body>
+</html>
